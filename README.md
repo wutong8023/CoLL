@@ -5,7 +5,7 @@ CoLL is a playground for research at the intersection of continual learning, act
 The implementation of typical baseline methods and the respective continual learning settings.
 The interface for customized evaluation. See [documentation](https://wutong8023.site/CoLL/) for more details.
 
-# Install
+## Install
 ```bash
 pip install coll
 ```
