@@ -1,5 +1,5 @@
 * [Intro]()
-* [Quick Start](read_guide.md)
+* [Quick Start](quick_start.md "Quick Start")
 * Development
    * [Environment](development/environment.md)
 * [About](about.md)
