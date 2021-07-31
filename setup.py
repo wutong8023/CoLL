@@ -18,7 +18,7 @@ URL = 'https://github.com/wutong8023/CoLL'
 EMAIL = 'wutong8023@gmail.com'
 AUTHOR = 'Tongtong Wu'
 REQUIRES_PYTHON = '>=3.4.0'
-VERSION = '0.0.1'
+VERSION = '0.0.2'
 
 # What packages are required for this module to be executed?
 REQUIRED = [
