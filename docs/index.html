@@ -34,10 +34,13 @@
 
         executeScript: true,
 
-        // placeholder: 'Type to search',
-        // noData: 'No Results!',
-        // paths: 'auto',
-        // depth: 6,
+        search: {
+            maxAge: 86400000, // 过期时间，单位毫秒，默认一天
+            paths: 'auto',
+            placeholder: 'Type to search',
+            noData: 'No Results!',
+            depth: 2,
+        }
     }
 
 </script>
