@@ -15,19 +15,7 @@
 # limitations under the License.
 
 """
-# Intro: version-0.01 test
+# Intro:
 # Author: Tongtong Wu
 # Time: Jul 30, 2021
 """
-from firmiana import hello_world
-import unittest
-
-class TestStringMethods(unittest.TestCase):
-
-    def test_pypi(self):
-        hello_world()
-        self.assertEqual(hello_world(), None)
-
-
-if __name__ == '__main__':
-    unittest.main()

@@ -12,13 +12,13 @@ from shutil import rmtree
 from setuptools import find_packages, setup, Command
 
 # Package meta-data.
-NAME = 'firmiana'
+NAME = 'coll'
 DESCRIPTION = 'A playground for research at the interaction of continual learning and natural language processing.'
-URL = 'https://github.com/wutong8023/Firmiana'
+URL = 'https://github.com/wutong8023/CoLL'
 EMAIL = 'wutong8023@gmail.com'
 AUTHOR = 'Tongtong Wu'
 REQUIRES_PYTHON = '>=3.4.0'
-VERSION = '0.0.3'
+VERSION = '0.0.1'
 
 # What packages are required for this module to be executed?
 REQUIRED = [

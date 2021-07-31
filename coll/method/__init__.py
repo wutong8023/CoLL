@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 #
-# Copyright the Firmiana team.
+# Copyright the CoLL team.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -19,6 +19,3 @@
 # Author: Tongtong Wu
 # Time: Jul 30, 2021
 """
-
-def hello_world():
-    print("hello world")
