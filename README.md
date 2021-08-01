@@ -17,10 +17,22 @@ See [documentation](https://wutong8023.site/CoLL) for more details.
 **Note**: This is still very much a Work-In-Progress! Please feel free to share your wisdom.
 
 ## Installation
+You can install Torchmeta either using Python's package manager pip, or from source. To avoid any conflict with your existing Python setup, it is suggested to work in a virtual environment with [`virtualenv`](https://docs.python-guide.org/dev/virtualenvs/). To install `virtualenv`:
+```bash
+pip install --upgrade virtualenv
+virtualenv venv
+source venv/bin/activate
+```
+
+### Requirements
+ - Python 3.6 or above
+ - PyTorch 1.4 or above
+
 ### Using `pip`
 ```bash
 pip install coll
 ```
+
 ### From Source
 ```bash
 git clone https://github.com/wutong8023/CoLL.git

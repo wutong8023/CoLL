@@ -13,12 +13,31 @@ A collection of extensions and data-loaders for continual language learning in [
 
 **Note**: This is still very much a Work-In-Progress! Please feel free to share your wisdom.
 
-### Install
+## Installation
+You can install Torchmeta either using Python's package manager pip, or from source. To avoid any conflict with your existing Python setup, it is suggested to work in a virtual environment with [`virtualenv`](https://docs.python-guide.org/dev/virtualenvs/). To install `virtualenv`:
+```bash
+pip install --upgrade virtualenv
+virtualenv venv
+source venv/bin/activate
+```
+
+### Requirements
+ - Python 3.6 or above
+ - PyTorch 1.4 or above
+
+### Using `pip`
 ```bash
 pip install coll
 ```
 
-### Example
+### From Source
+```bash
+git clone https://github.com/wutong8023/CoLL.git
+cd CoLL
+python setup.py install
+```
+
+## Example
 ```python
 from coll.backbone import PLMClassifier
 from coll.environment import Environment, CreEnv
