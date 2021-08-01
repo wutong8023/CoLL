@@ -14,7 +14,7 @@ A collection of extensions and data-loaders for continual language learning in [
 **Note**: This is still very much a Work-In-Progress! Please feel free to share your wisdom.
 
 ## Installation
-You can install Torchmeta either using Python's package manager pip, or from source. To avoid any conflict with your existing Python setup, it is suggested to work in a virtual environment with [`virtualenv`](https://docs.python-guide.org/dev/virtualenvs/). To install `virtualenv`:
+You can install CoLL either using Python's package manager pip, or from source. To avoid any conflict with your existing Python setup, it is suggested to work in a virtual environment with [`virtualenv`](https://docs.python-guide.org/dev/virtualenvs/). To install `virtualenv`:
 ```bash
 pip install --upgrade virtualenv
 virtualenv venv
