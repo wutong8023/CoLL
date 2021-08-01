@@ -4,12 +4,12 @@
 A collection of extensions and data-loaders for continual language learning in [PyTorch](https://pytorch.org/). CoLL contains popular continual language learning benchmarks, similarly compatible with both [`Avalanche`](https://github.com/ContinualAI/avalanche) and [`Torchmeta`](https://github.com/tristandeleu/pytorch-meta/).
 
 #### Features
-  - Application: Unified interfaces of typical continual-language-learning applications, including text classification, text generation, and sequence labelling, which enables easy benchmarking on multiple problems and reproducibility.
-  - Learning Paradigm: Simulating the learning paradigm of full-supervision, semi-supervision, un-supervision or self-supervision.
-  - Continual Learning Setting: Built-in typical continual learning settings, e.g., instance-incremental learning, class-incremental learning, task-incremental learning, domain-incremental learning. 
-  - Backbone Model: Supporting various pretrained language models (HuggingFace/Transformers) and the extension modules (Adapters) for continual learning. 
-  - Metrics: Unified metrics for the fair and systematical comparison.
-  - Baselines: Built-in implementations and helper functions for some popular methods, with default arguments from the literature.
+  - **Application**: Unified interfaces of typical continual-language-learning applications, including text classification, text generation, and sequence labelling, which enables easy benchmarking on multiple problems and reproducibility.
+  - **Learning Paradigm**: Simulating the learning paradigm of full-supervision, semi-supervision, un-supervision or self-supervision.
+  - **Continual Setting**: Built-in typical continual learning settings, e.g., instance-incremental learning, class-incremental learning, task-incremental learning, domain-incremental learning. 
+  - **Backbone Model**: Supporting various pretrained language models (HuggingFace/Transformers) and the extension modules (Adapters) for continual learning. 
+  - **Metrics**: Unified metrics for the fair and systematical comparison.
+  - **Baselines**: Built-in implementations and helper functions for some popular methods, with default arguments from the literature.
 
 **Note**: This is still very much a Work-In-Progress! Please feel free to share your wisdom.
 
