@@ -21,16 +21,16 @@ virtualenv venv
 source venv/bin/activate
 ```
 
-### Requirements
+#### Requirements
  - Python 3.6 or above
  - PyTorch 1.4 or above
 
-### Using `pip`
+#### Using `pip`
 ```bash
 pip install coll
 ```
 
-### From Source
+#### From Source
 ```bash
 git clone https://github.com/wutong8023/CoLL.git
 cd CoLL

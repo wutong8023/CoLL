@@ -3,9 +3,6 @@
 
 A collection of extensions and data-loaders for continual language learning in [PyTorch](https://pytorch.org/). CoLL contains popular continual language learning benchmarks, similarly compatible with both [`Avalanche`](https://github.com/ContinualAI/avalanche) and [`Torchmeta`](https://github.com/tristandeleu/pytorch-meta/).
 
-See [documentation](https://wutong8023.site/CoLL) for more details.
-
-
 #### Features
   - **Application**: Unified interfaces of typical continual-language-learning applications, including text classification, text generation, and sequence labelling, which enables easy benchmarking on multiple problems and reproducibility.
   - **Learning Paradigm**: Simulating the learning paradigm of full-supervision, semi-supervision, un-supervision or self-supervision.
@@ -24,16 +21,16 @@ virtualenv venv
 source venv/bin/activate
 ```
 
-### Requirements
+#### Requirements
  - Python 3.6 or above
  - PyTorch 1.4 or above
 
-### Using `pip`
+#### Using `pip`
 ```bash
 pip install coll
 ```
 
-### From Source
+#### From Source
 ```bash
 git clone https://github.com/wutong8023/CoLL.git
 cd CoLL
