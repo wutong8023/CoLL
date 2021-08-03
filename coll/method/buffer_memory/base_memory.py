@@ -19,3 +19,20 @@
 # Author: Tongtong Wu
 # Time: Aug 3, 2021
 """
+
+
+class BaseMemory:
+    def __init__(self):
+        pass
+    
+    def update(self):
+        pass
+    
+    def add(self):
+        pass
+    
+    def delete(self):
+        pass
+    
+    def query(self):
+        pass

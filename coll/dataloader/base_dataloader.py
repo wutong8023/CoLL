@@ -19,25 +19,3 @@
 # Author: Tongtong Wu
 # Time: Aug 3, 2021
 """
-
-
-class BaseController:
-    def __init__(self):
-        self.datasets = []
-        self.train_stream = []
-        self.test_stream = []
-        self.current_stage = []
-        self.stacked_test_data = []
-        
-        self.task_boundary = False
-        self.task_id_4_train = False
-        self.task_id_4_test = False
-        pass
-    
-    def permutation(self):
-        pass
-    
-    def learning_paradigm(self):
-        pass
-    
-

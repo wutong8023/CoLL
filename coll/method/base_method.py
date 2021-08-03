@@ -19,3 +19,39 @@
 # Author: Tongtong Wu
 # Time: Aug 3, 2021
 """
+
+
+class BaseMethod:
+    def __init__(self):
+        self.functions = ["before_stage", "observe", "after_stage"]
+        pass
+    
+    def before_stage(self):
+        """
+        stage-level preprocessing
+        """
+        pass
+    
+    def before_epoch(self):
+        """
+        epoch-level preprocessing
+        """
+        pass
+    
+    def observe(self):
+        """
+        batch-level processing
+        """
+        pass
+    
+    def after_epoch(self):
+        """
+        epoch-level postprocessing
+        """
+        pass
+    
+    def after_stage(self):
+        """
+        stage-level postprocessing
+        """
+        pass

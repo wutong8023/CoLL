@@ -19,3 +19,30 @@
 # Author: Tongtong Wu
 # Time: Aug 3, 2021
 """
+
+
+class BaseBackbone:
+    def __init__(self):
+        self.prompt = None
+        self.PLM = None
+        self.Adapter = None
+        self.header = None
+        pass
+    
+    def forward(self):
+        pass
+
+    def init_parameter(self):
+        pass
+    
+    def save_model(self):
+        pass
+    
+    def load_model(self):
+        pass
+    
+    def deep_copy(self):
+        pass
+    
+    def get_gradient(self):
+        pass

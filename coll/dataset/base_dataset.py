@@ -19,3 +19,22 @@
 # Author: Tongtong Wu
 # Time: Aug 3, 2021
 """
+
+
+class BaseDataset:
+    def __init__(self):
+        self.file_path = ""
+        pass
+    
+    def download_data(self):
+        pass
+    
+    def load_data(self):
+        pass
+    
+    def preprocess_data(self):
+        pass
+    
+    def get_dataset(self):
+        pass
+    
