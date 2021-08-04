@@ -20,3 +20,14 @@
 # Time: Jul 30, 2021
 """
 
+supported_ptm = {
+        "bert": ["Bert", "bert-base-uncased"],
+        "roberta": ["Roberta", "roberta-base"],
+        "albert": ["Albert", "albert-base-v2"],
+        "distilbert": ["DistilBert", "distilbert-base-uncased"],
+        "xlnet": ["XLNet", "xlnet-base-cased"],
+        "gpt2": ["GPT2", "gpt2"],
+    }
+
+
+

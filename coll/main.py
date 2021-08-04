@@ -19,6 +19,4 @@
 # Author: Tongtong Wu
 # Time: Jul 30, 2021
 """
-def hello_world():
-    print("hello world")
-    return "hello"
+

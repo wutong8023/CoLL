@@ -15,7 +15,8 @@
 # limitations under the License.
 
 """
-# Intro: 
+# Intro: The training script for utilize experience replay
 # Author: Tongtong Wu
 # Time: Aug 3, 2021
 """
+

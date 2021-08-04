@@ -15,27 +15,19 @@
 # limitations under the License.
 
 """
-# Intro:
+# Intro: text generation datasets, which are used in continual machine translation scenarios.
 # Author: Tongtong Wu
-# Time: Aug 3, 2021
+# Time: Aug 4, 2021
 """
+import torch
+import numpy as np
 
-__all__ = ['ALL_DATASET', 'CONTINUAL_RE_DATASET', 'LAMOL_DATASET', 'CONTINUAL_TC_DATASET']
+from torch.utils.data import DataLoader, Dataset
+from base_dataset import BaseDataset
 
-ALL_DATASET = {
-    "fewrel": "relation extraction"
-}
 
-CONTINUAL_RE_DATASET = {
-    "fewrel": "relation extraction"
-}
-
-LAMOL_DATASET = {
-    "squad": "question answering",
-    "wikisql": "text2sql"
-}
-
-CONTINUAL_TC_DATASET = {
-    "yahoo": "sentiment classification",
-    "yelp": "sentiment classification"
-}
+class WMT15(BaseDataset):
+    # todo: load fewrel dataset
+    def __init__(self):
+        super(WMT15, self).__init__()
+        pass

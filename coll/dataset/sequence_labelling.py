@@ -15,8 +15,20 @@
 # limitations under the License.
 
 """
-# Intro: 
+# Intro: squad-like question answering datasets, which are used in LAMOL.
 # Author: Tongtong Wu
-# Time: Aug 3, 2021
+# Time: Aug 4, 2021
 """
 
+import torch
+import numpy as np
+
+from torch.utils.data import DataLoader, Dataset
+from base_dataset import BaseDataset
+
+
+class Squad(BaseDataset):
+    # todo: load squad dataset
+    def __init__(self):
+        super(Squad, self).__init__()
+        pass

@@ -20,29 +20,44 @@
 # Time: Aug 3, 2021
 """
 
+import torch
+import torch.nn as nn
 
-class BaseBackbone:
+from abc import abstractmethod
+
+
+class BaseBackbone(nn.Module):
     def __init__(self):
-        self.prompt = None
+        super(BaseBackbone, self).__init__()
+        self.prompt_encoder = None
         self.PLM = None
         self.Adapter = None
-        self.header = None
+        self.head = None
+        self.Tokenizer = None
         pass
     
+    @abstractmethod
     def forward(self):
         pass
-
+    
+    @abstractmethod
     def init_parameter(self):
         pass
     
+    @abstractmethod
     def save_model(self):
         pass
     
+    @abstractmethod
     def load_model(self):
         pass
     
+    @abstractmethod
     def deep_copy(self):
         pass
     
+    @abstractmethod
     def get_gradient(self):
         pass
+    
+    

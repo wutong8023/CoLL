@@ -20,33 +20,49 @@
 # Time: Aug 3, 2021
 """
 import torch
-
 import numpy as np
 
 from torch.utils.data import DataLoader, Dataset
+from base_dataset import BaseDataset
 
-class BaseDataset(Dataset):
+
+class Fewrel(BaseDataset):
+    # todo: load fewrel dataset
     def __init__(self):
-        self.file_path = ""
-        self.data = []
-        self.target = None
-        self.tokenizer = None
+        super(Fewrel, self).__init__()
         pass
 
-    def __len__(self):
-        return len(self.data)
 
-    def __getitem__(self, idx):
-        instance = self.data[idx]
-        return instance
-    
-    def download_data(self):
+class SimpleQuestion(BaseDataset):
+    # todo: load SimpleqQuestion dataset
+    def __init__(self):
+        super(SimpleQuestion, self).__init__()
         pass
-    
-    def load_data(self):
-        pass
-    
-    def preprocess_data(self):
-        pass
-    
 
+
+class Tacred(BaseDataset):
+    # todo: load tacred dataset
+    def __init__(self):
+        super(Tacred, self).__init__()
+        pass
+
+
+class Clinc150(BaseDataset):
+    # todo: load clinc150 dataset
+    def __init__(self):
+        super(Clinc150, self).__init__()
+        pass
+
+
+class Maven(BaseDataset):
+    # todo: load maven dataset
+    def __init__(self):
+        super(Maven, self).__init__()
+        pass
+
+
+class Webred(BaseDataset):
+    # todo: load webred
+    def __init__(self):
+        super(Webred, self).__init__()
+        pass

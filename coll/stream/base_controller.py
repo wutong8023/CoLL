@@ -24,20 +24,40 @@
 class BaseController:
     def __init__(self):
         self.datasets = []
-        self.train_stream = []
-        self.test_stream = []
-        self.current_stage = []
-        self.stacked_test_data = []
         
-        self.task_boundary = False
-        self.task_id_4_train = False
-        self.task_id_4_test = False
+        self.train_stream = []  # a list of training dataloader for each stage
+        self.test_stream = []  # a list of testing dataloader respective to the current training stage
+        
+        self.current_stage = 0  # stage counter
+        
+        self.stacked_train_data = []  # for active-continual learning
+        self.stacked_test_data = []  # for evaluation
+        
+        self.task_boundary = True  # if False: Online-learning
+        self.task_id_4_train = True  # provide stage id during training
+        self.task_id_4_test = True  # provide stage id during testing
         pass
     
     def permutation(self):
+        """
+        schedule the stage order
+        """
         pass
     
     def learning_paradigm(self):
+        """
+        control the supervision of dataset to simulate:
+        few-shot continual learning,
+        semi-supervised continual learning,
+        """
         pass
     
-
+    def collate_fn(self):
+        pass
+    
+    def prepare_dataloader(self):
+        """
+        split data into train / test;
+        split dataset into multi-stage data stream;
+        """
+        pass

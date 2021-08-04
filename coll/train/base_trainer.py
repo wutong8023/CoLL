@@ -15,27 +15,14 @@
 # limitations under the License.
 
 """
-# Intro:
+# Intro: 
 # Author: Tongtong Wu
 # Time: Aug 3, 2021
 """
 
-__all__ = ['ALL_DATASET', 'CONTINUAL_RE_DATASET', 'LAMOL_DATASET', 'CONTINUAL_TC_DATASET']
+class BaseTrainer:
+    def __init__(self):
+        pass
+    
+    
 
-ALL_DATASET = {
-    "fewrel": "relation extraction"
-}
-
-CONTINUAL_RE_DATASET = {
-    "fewrel": "relation extraction"
-}
-
-LAMOL_DATASET = {
-    "squad": "question answering",
-    "wikisql": "text2sql"
-}
-
-CONTINUAL_TC_DATASET = {
-    "yahoo": "sentiment classification",
-    "yelp": "sentiment classification"
-}

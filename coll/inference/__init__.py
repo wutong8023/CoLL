@@ -19,3 +19,8 @@
 # Author: Tongtong Wu
 # Time: Aug 3, 2021
 """
+
+
+class Inference:
+    def __init__(self):
+        pass
