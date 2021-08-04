@@ -20,6 +20,8 @@
 # Time: Aug 3, 2021
 """
 
+from argparse import ArgumentParser
+
 
 class BaseMethod:
     def __init__(self):
@@ -55,3 +57,9 @@ class BaseMethod:
         stage-level postprocessing
         """
         pass
+    
+    def get_parser(self, parser) -> ArgumentParser:
+        """
+        set method-specific hyper-parameters
+        """
+        return parser

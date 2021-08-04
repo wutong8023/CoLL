@@ -25,6 +25,8 @@ import numpy as np
 from torch.utils.data import DataLoader, Dataset
 from base_dataset import BaseDataset
 
+__all__ = ['Fewrel', 'SimpleQuestion', 'Tacred', 'Clinc150', 'Maven', 'Webred']
+
 
 class Fewrel(BaseDataset):
     # todo: load fewrel dataset
@@ -65,4 +67,11 @@ class Webred(BaseDataset):
     # todo: load webred
     def __init__(self):
         super(Webred, self).__init__()
+        pass
+
+
+class Yelp(BaseDataset):
+    # todo: load yelp
+    def __init__(self):
+        super(Yelp, self).__init__()
         pass

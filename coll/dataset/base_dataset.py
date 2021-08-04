@@ -25,6 +25,9 @@ import numpy as np
 
 from torch.utils.data import DataLoader, Dataset
 
+
+__all__ = ['BaseDataset']
+
 class BaseDataset(Dataset):
     def __init__(self):
         self.file_path = ""
@@ -32,10 +35,10 @@ class BaseDataset(Dataset):
         self.target = None
         self.tokenizer = None
         pass
-
+    
     def __len__(self):
         return len(self.data)
-
+    
     def __getitem__(self, idx):
         instance = self.data[idx]
         return instance
@@ -48,5 +51,3 @@ class BaseDataset(Dataset):
     
     def preprocess_data(self):
         pass
-    
-

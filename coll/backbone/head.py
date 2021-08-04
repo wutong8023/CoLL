@@ -15,50 +15,46 @@
 # limitations under the License.
 
 """
-# Intro: 
+# Intro: the customized head for various nlp applications.
 # Author: Tongtong Wu
-# Time: Aug 3, 2021
+# Time: Aug 4, 2021
 """
-
 import torch
 import torch.nn as nn
 
-from abc import abstractmethod
 
-__all__ = ['BaseBackbone']
-
-
-class BaseBackbone(nn.Module):
+class ClassifierHead(nn.Module):
     def __init__(self):
-        super(BaseBackbone, self).__init__()
-        self.prompt_encoder = None
-        self.PLM = None
-        self.Adapter = None
-        self.head = None
-        self.Tokenizer = None
+        super(ClassifierHead, self).__init__()
         pass
     
-    @abstractmethod
     def forward(self, x):
         pass
-    
-    def init_parameter(self, module):
+
+
+class GenerationHead(nn.Module):
+    def __init__(self):
+        super(GenerationHead, self).__init__()
         pass
     
-    def save_model(self, dir_path):
+    def forward(self, x):
+        pass
+
+
+class SequenceLabellingHead(nn.Module):
+    def __init__(self):
+        super(SequenceLabellingHead, self).__init__()
         pass
     
-    def load_model(self, model):
+    def forward(self, x):
+        pass
+
+
+class MaskPredictionHead(nn.Module):
+    # todo: for prompt-based classification methods
+    def __init__(self):
+        super(MaskPredictionHead, self).__init__()
         pass
     
-    def deep_copy(self):
-        pass
-    
-    def get_gradient(self):
-        pass
-    
-    def set_gradient(self, grad):
-        pass
-    
-    def probing_layer(self, layer_id):
+    def forward(self, x):
         pass

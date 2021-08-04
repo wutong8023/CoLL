@@ -22,43 +22,36 @@
 
 import torch
 import torch.nn as nn
+from base_backbone import BaseBackbone
 
-from abc import abstractmethod
-
-__all__ = ['BaseBackbone']
+__all__ = ['PLMClassifier']
 
 
-class BaseBackbone(nn.Module):
-    def __init__(self):
-        super(BaseBackbone, self).__init__()
-        self.prompt_encoder = None
-        self.PLM = None
-        self.Adapter = None
-        self.head = None
-        self.Tokenizer = None
+class PLMClassifier(BaseBackbone):
+    def __init__(self, plm, tokenizer, hidden_size=768, output_size=10):
+        super(PLMClassifier, self).__init__()
+        self.PLM = plm
+        self.head = nn.Sequential(
+            nn.Linear(hidden_size, output_size),
+            nn.Softmax(output_size)
+        )
+        self.Tokenizer = tokenizer
         pass
     
-    @abstractmethod
     def forward(self, x):
         pass
     
-    def init_parameter(self, module):
+    def init_parameter(self):
         pass
     
-    def save_model(self, dir_path):
+    def save_model(self):
         pass
     
-    def load_model(self, model):
+    def load_model(self):
         pass
     
     def deep_copy(self):
         pass
     
     def get_gradient(self):
-        pass
-    
-    def set_gradient(self, grad):
-        pass
-    
-    def probing_layer(self, layer_id):
         pass

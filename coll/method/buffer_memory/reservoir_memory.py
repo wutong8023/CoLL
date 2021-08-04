@@ -15,21 +15,15 @@
 # limitations under the License.
 
 """
-# Intro: text generation datasets, which are used in continual machine translation scenarios.
+# Intro: reservoir sampling-based buffer-memory module for replay-based strategy
 # Author: Tongtong Wu
 # Time: Aug 4, 2021
 """
-import torch
-import numpy as np
 
-from torch.utils.data import DataLoader, Dataset
-from base_dataset import BaseDataset
-
-__all__ = ['WMT15']
+from base_memory import BaseMemory
 
 
-class WMT15(BaseDataset):
-    # todo: load fewrel dataset
+class ReservoirMemory(BaseMemory):
     def __init__(self):
-        super(WMT15, self).__init__()
+        super(ReservoirMemory, self).__init__()
         pass

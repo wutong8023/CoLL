@@ -15,50 +15,35 @@
 # limitations under the License.
 
 """
-# Intro: 
+# Intro: adapter structure for task-incremental learning
 # Author: Tongtong Wu
-# Time: Aug 3, 2021
+# Time: Aug 4, 2021
 """
-
 import torch
 import torch.nn as nn
 
-from abc import abstractmethod
-
-__all__ = ['BaseBackbone']
+__all__ = ['BaseAdapter', 'AdapterFusion']
 
 
-class BaseBackbone(nn.Module):
+class BaseAdapter(nn.Module):
+    """
+    the base adapter structure and functions.
+    """
     def __init__(self):
-        super(BaseBackbone, self).__init__()
-        self.prompt_encoder = None
-        self.PLM = None
-        self.Adapter = None
-        self.head = None
-        self.Tokenizer = None
+        super(BaseAdapter, self).__init__()
         pass
     
-    @abstractmethod
     def forward(self, x):
         pass
     
-    def init_parameter(self, module):
+    def add_adapter(self, model: nn.Module):
         pass
     
-    def save_model(self, dir_path):
+    def init_parameter(self):
         pass
-    
-    def load_model(self, model):
-        pass
-    
-    def deep_copy(self):
-        pass
-    
-    def get_gradient(self):
-        pass
-    
-    def set_gradient(self, grad):
-        pass
-    
-    def probing_layer(self, layer_id):
+
+
+class AdapterFusion(nn.Module):
+    def __init__(self):
+        super(AdapterFusion, self).__init__()
         pass

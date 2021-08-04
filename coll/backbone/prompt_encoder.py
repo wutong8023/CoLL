@@ -15,50 +15,19 @@
 # limitations under the License.
 
 """
-# Intro: 
+# Intro: continuous prompt encoders
 # Author: Tongtong Wu
-# Time: Aug 3, 2021
+# Time: Aug 4, 2021
 """
 
 import torch
 import torch.nn as nn
 
-from abc import abstractmethod
 
-__all__ = ['BaseBackbone']
-
-
-class BaseBackbone(nn.Module):
+class PTuningPrompt(nn.Module):
     def __init__(self):
-        super(BaseBackbone, self).__init__()
-        self.prompt_encoder = None
-        self.PLM = None
-        self.Adapter = None
-        self.head = None
-        self.Tokenizer = None
+        super(PTuningPrompt, self).__init__()
         pass
     
-    @abstractmethod
     def forward(self, x):
-        pass
-    
-    def init_parameter(self, module):
-        pass
-    
-    def save_model(self, dir_path):
-        pass
-    
-    def load_model(self, model):
-        pass
-    
-    def deep_copy(self):
-        pass
-    
-    def get_gradient(self):
-        pass
-    
-    def set_gradient(self, grad):
-        pass
-    
-    def probing_layer(self, layer_id):
         pass
