@@ -17,51 +17,18 @@
 """
 # Intro: 
 # Author: Tongtong Wu
-# Time: Aug 3, 2021
+# Time: Aug 4, 2021
 """
-
 from argparse import ArgumentParser
+from base_method import BaseMethod
 
 
-class BaseMethod:
+class Vanilla(BaseMethod):
     def __init__(self, backbone):
-        self.backbone = backbone
-        self.functions = ["before_stage", "observe", "after_stage"]
-        self.capacity = {
-            "task_boundary": False,
-            "task_id_4_train": False,
-            "task_id_4_test": False,
-        }
-        pass
-    
-    def before_stage(self):
-        """
-        stage-level preprocessing
-        """
-        pass
-    
-    def before_epoch(self):
-        """
-        epoch-level preprocessing
-        """
+        super(Vanilla, self).__init__(backbone)
         pass
     
     def observe(self, x):
-        """
-        batch-level processing
-        """
-        pass
-    
-    def after_epoch(self):
-        """
-        epoch-level postprocessing
-        """
-        pass
-    
-    def after_stage(self):
-        """
-        stage-level postprocessing
-        """
         pass
     
     def set_argument(self, parser) -> ArgumentParser:

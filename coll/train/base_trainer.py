@@ -20,9 +20,7 @@
 # Time: Aug 3, 2021
 """
 
+
 class BaseTrainer:
     def __init__(self):
         pass
-    
-    
-

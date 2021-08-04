@@ -15,23 +15,7 @@
 # limitations under the License.
 
 """
-# Intro: text generation datasets, which are used in continual machine translation scenarios.
+# Intro: 
 # Author: Tongtong Wu
 # Time: Aug 4, 2021
 """
-import torch
-import numpy as np
-
-from torch.utils.data import DataLoader, Dataset
-from base_dataset import BaseDataset
-
-__all__ = ['WMT15']
-
-
-class WMT15(BaseDataset):
-    # todo: load fewrel dataset
-    def __init__(self):
-        super(WMT15, self).__init__()
-        pass
-    
-    

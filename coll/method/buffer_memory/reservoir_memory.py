@@ -27,3 +27,5 @@ class ReservoirMemory(BaseMemory):
     def __init__(self):
         super(ReservoirMemory, self).__init__()
         pass
+
+

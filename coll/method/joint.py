@@ -17,53 +17,31 @@
 """
 # Intro: 
 # Author: Tongtong Wu
-# Time: Aug 3, 2021
+# Time: Aug 4, 2021
 """
 
 from argparse import ArgumentParser
+from base_method import BaseMethod
 
 
-class BaseMethod:
+class Joint(BaseMethod):
     def __init__(self, backbone):
-        self.backbone = backbone
-        self.functions = ["before_stage", "observe", "after_stage"]
-        self.capacity = {
-            "task_boundary": False,
-            "task_id_4_train": False,
-            "task_id_4_test": False,
-        }
+        super(Joint, self).__init__(backbone=backbone)
         pass
     
     def before_stage(self):
         """
-        stage-level preprocessing
-        """
-        pass
-    
-    def before_epoch(self):
-        """
-        epoch-level preprocessing
+        if not the last stage, just move to the next stage without training and accumulate the training data.
+        otherwise, train the accumulated data jointly.
         """
         pass
     
     def observe(self, x):
         """
-        batch-level processing
+        training on each data batch
         """
         pass
-    
-    def after_epoch(self):
-        """
-        epoch-level postprocessing
-        """
-        pass
-    
-    def after_stage(self):
-        """
-        stage-level postprocessing
-        """
-        pass
-    
+
     def set_argument(self, parser) -> ArgumentParser:
         """
         set method-specific hyper-parameters

@@ -22,13 +22,12 @@
 import torch
 import torch.nn as nn
 
-__all__ = ['BaseAdapter', 'AdapterFusion']
-
 
 class BaseAdapter(nn.Module):
     """
     the base adapter structure and functions.
     """
+    
     def __init__(self):
         super(BaseAdapter, self).__init__()
         pass
@@ -40,10 +39,4 @@ class BaseAdapter(nn.Module):
         pass
     
     def init_parameter(self):
-        pass
-
-
-class AdapterFusion(nn.Module):
-    def __init__(self):
-        super(AdapterFusion, self).__init__()
         pass
