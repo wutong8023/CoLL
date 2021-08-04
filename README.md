@@ -1,7 +1,7 @@
 # CoLL - ***Co***ntinual ***L***anguage ***L***earning
 [![PyPI](https://img.shields.io/pypi/v/coll)](https://pypi.org/project/coll/) [![Documentation](https://img.shields.io/badge/docs-CoLL-blue)](https://wutong8023.site/CoLL/)
 
-A collection of extensions and data-loaders for continual language learning in [PyTorch](https://pytorch.org/). CoLL contains popular continual language learning benchmarks, similarly compatible with both [`Avalanche`](https://github.com/ContinualAI/avalanche) and [`Torchmeta`](https://github.com/tristandeleu/pytorch-meta/).
+A collection of extensions and data-loaders for continual language learning in [PyTorch](https://pytorch.org/). CoLL contains popular continual language learning benchmarks, similarly compatible with both [`Avalanche`](https://github.com/ContinualAI/avalanche) and [`Sequoia`](https://github.com/lebrice/Sequoia).
 
 #### Features
   - **Application**: Unified interfaces of typical continual-language-learning applications, including text classification, text generation, and sequence labelling, which enables easy benchmarking on multiple problems and reproducibility.
