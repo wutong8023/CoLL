@@ -20,3 +20,34 @@
 # Time: Aug 3, 2021
 """
 
+from coll.dataset.text_classification import Fewrel, Clinc150, Maven
+from coll.stream.cre_controller import CreController
+from coll.backbone.plm_classifier_backbone import PLMClassifier
+from coll.train.classification_trainer import TCTrainer
+
+
+
+# 1. define continual learning environment
+# customize continual learning environment
+data = FewRel()
+paradigm = SemiSuper()
+setting = TaskIL(split_by="clustering")
+cl_env = Environment(data, paradigm, setting)
+
+# or load predefined environment
+cl_env = CreEnv()
+
+# 2 define backbone model
+backbone = PLMClassifier()
+
+# 3 define continual learning strategy
+memory = ReservoirMemory(size=500, extend=False)
+cl_method = ER(memory)
+
+# 4 train
+Trainer.train(backbone, cl_env, cl_method)
+
+# 5 evaluation
+results = Evaluater.evaluate(backbone, cl_env, cl_method, acc_a)
+
+print(results.summary())

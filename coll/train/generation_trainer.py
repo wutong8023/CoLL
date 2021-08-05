@@ -17,20 +17,13 @@
 """
 # Intro: 
 # Author: Tongtong Wu
-# Time: Aug 3, 2021
+# Time: Aug 4, 2021
 """
 
+from base_trainer import BaseTrainer
 
-class BaseTrainer:
-    def __init__(self, args, controller, backbone, method):
-        self.args = args
-        self.controller = controller
-        self.backbone = backbone
-        self.method = method
-        pass
-    
-    def train(self):
-        pass
-    
-    def evaluate(self):
+
+class TCTrainer(BaseTrainer):
+    def __init__(self):
+        super(TCTrainer, self).__init__()
         pass

@@ -20,17 +20,10 @@
 # Time: Aug 3, 2021
 """
 
+from base_controller import BaseController
 
-class BaseTrainer:
-    def __init__(self, args, controller, backbone, method):
-        self.args = args
-        self.controller = controller
-        self.backbone = backbone
-        self.method = method
-        pass
-    
-    def train(self):
-        pass
-    
-    def evaluate(self):
+
+class CreController(BaseController):
+    def __init__(self, dataset):
+        super(CreController, self).__init__(dataset)
         pass

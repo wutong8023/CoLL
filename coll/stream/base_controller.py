@@ -20,10 +20,12 @@
 # Time: Aug 3, 2021
 """
 
+from argparse import ArgumentParser
+
 
 class BaseController:
-    def __init__(self):
-        self.datasets = []
+    def __init__(self, dataset: []):
+        self.datasets = dataset
         
         self.train_stream = []  # a list of training dataloader for each stage
         self.test_stream = []  # a list of testing dataloader respective to the current training stage
@@ -61,4 +63,10 @@ class BaseController:
         split dataset into multi-stage data stream;
         """
         pass
-
+    
+    def ger_parser(self) -> ArgumentParser:
+        """
+        return parser
+        """
+        parser = ArgumentParser()
+        return parser
