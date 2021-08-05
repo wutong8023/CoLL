@@ -19,13 +19,3 @@
 # Author: Tongtong Wu
 # Time: Aug 4, 2021
 """
-
-from base_trainer import BaseTrainer
-
-
-class TCTrainer(BaseTrainer):
-    def __init__(self):
-        super(TCTrainer, self).__init__()
-        pass
-    
-    
