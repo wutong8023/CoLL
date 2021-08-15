@@ -76,4 +76,14 @@ results = Evaluater.evaluate(backbone, cl_env, cl_method, acc_a)
 print(results.summary())
 ```
 
+## Framework Structure
+```
+coll
+├── coll
+│   ├── evaluation
+│   └── utils
+└── examples
+```
+
+
 
