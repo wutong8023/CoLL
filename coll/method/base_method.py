@@ -34,6 +34,10 @@ class BaseMethod:
         }
         pass
     
+    def set_backbone(self):
+        pass
+    
+    
     def before_stage(self):
         """
         stage-level preprocessing
@@ -69,3 +73,4 @@ class BaseMethod:
         set method-specific hyper-parameters
         """
         return parser
+
