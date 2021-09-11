@@ -15,8 +15,25 @@
 # limitations under the License.
 
 """
-# Intro: continual language learning framework
+# Intro: 
 # Author: Tongtong Wu
-# Time: Jul 30, 2021
+# Time: Aug 4, 2021
 """
+import unittest
+from datasets import list_datasets
 
+
+class TestDatasets(unittest.TestCase):
+    
+    def test_list_dataset(self):
+        print(list_datasets())
+        print(len(list_datasets()))
+        self.assertTrue(len(list_datasets())>0)
+        
+    
+
+
+if __name__ == '__main__':
+    unittest.main()
+    print(list_datasets())
+    print(len(list_datasets()))

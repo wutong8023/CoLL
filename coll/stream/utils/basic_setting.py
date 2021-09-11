@@ -15,19 +15,8 @@
 # limitations under the License.
 
 """
-# Intro: continuous prompt encoders
+# Intro: 
 # Author: Tongtong Wu
 # Time: Aug 4, 2021
 """
 
-import torch
-import torch.nn as nn
-
-
-class PrefixTuningPrompt(nn.Module):
-    def __init__(self):
-        super(PrefixTuningPrompt, self).__init__()
-        pass
-    
-    def forward(self, x):
-        pass

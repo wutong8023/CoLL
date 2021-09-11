@@ -25,7 +25,7 @@ from argparse import ArgumentParser
 
 class BaseMethod:
     def __init__(self, backbone):
-        self.backbone = backbone
+        self.backbone = self.set_backbone(backbone)
         self.functions = ["before_stage", "observe", "after_stage"]
         self.capacity = {
             "task_boundary": False,
@@ -34,9 +34,9 @@ class BaseMethod:
         }
         pass
     
-    def set_backbone(self):
-        pass
-    
+    def set_backbone(self, backbone):
+        backbone = backbone
+        return backbone
     
     def before_stage(self):
         """
@@ -73,4 +73,3 @@ class BaseMethod:
         set method-specific hyper-parameters
         """
         return parser
-

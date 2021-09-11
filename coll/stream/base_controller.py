@@ -27,6 +27,8 @@ class BaseController:
     def __init__(self, dataset: []):
         self.datasets = dataset
         
+        self.permutation = []
+        
         self.train_stream = []  # a list of training dataloader for each stage
         self.test_stream = []  # a list of testing dataloader respective to the current training stage
         
@@ -40,7 +42,7 @@ class BaseController:
         self.task_id_4_test = True  # provide stage id during testing
         pass
     
-    def permutation(self):
+    def permute(self):
         """
         schedule the stage order
         """

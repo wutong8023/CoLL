@@ -15,28 +15,19 @@
 # limitations under the License.
 
 """
-# Intro: adapter structure for task-incremental learning
+# Intro: continuous prompt encoders
 # Author: Tongtong Wu
 # Time: Aug 4, 2021
 """
+
 import torch
 import torch.nn as nn
 
 
-class BaseAdapter(nn.Module):
-    """
-    the base adapter structure and functions.
-    """
-    
+class Prompt(nn.Module):
     def __init__(self):
-        super(BaseAdapter, self).__init__()
+        super(Prompt, self).__init__()
         pass
     
     def forward(self, x):
-        pass
-    
-    def add_adapter(self, model: nn.Module):
-        pass
-    
-    def init_parameter(self):
         pass

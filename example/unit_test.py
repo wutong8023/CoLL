@@ -17,10 +17,10 @@
 """
 # Intro: 
 # Author: Tongtong Wu
-# Time: Aug 3, 2021
+# Time: Aug 4, 2021
 """
 
+import coll.backbone as backbone
 
-class Inference:
-    def __init__(self):
-        pass
+x = backbone.get_plm()
+print(x)

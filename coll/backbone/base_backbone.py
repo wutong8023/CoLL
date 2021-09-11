@@ -22,10 +22,31 @@
 
 import torch
 import torch.nn as nn
-
+from argparse import ArgumentParser
 from abc import abstractmethod
 
-__all__ = ['BaseBackbone']
+from coll.backbone import get_plm
+
+__all__ = ['BaseBackbone', 'add_base_model_args']
+
+
+# modularized arguments management
+def add_base_model_args(parser: ArgumentParser) -> None:
+    """
+    Adds the arguments used by all the models.
+    :param parser: the parser instance
+    """
+    parser.add_argument('--plm_layers', type=int, required=False,
+                        help='the number of layers in the pretrained model',
+                        choices=[6, 12, 24, 32, 36], default=12)
+    args = parser.parse_args()
+    parser.add_argument('--model', type=str, required=True,
+                        help='pretrained model name.', default='bert',
+                        choices=get_plm(args.plm_layers))
+    parser.add_argument('--expand', type=str, required=False,
+                        help='when and how expand the architecture, the default is not changing',
+                        choices=['fix', 'line', 'mix'],
+                        default='fix')
 
 
 class BaseBackbone(nn.Module):
@@ -36,10 +57,7 @@ class BaseBackbone(nn.Module):
         self.Adapter = None
         self.head = None
         self.Tokenizer = None
-        pass
-    
-    @abstractmethod
-    def forward(self, x):
+        self.expand_strategy = "fix"
         pass
     
     def init_parameter(self, module):

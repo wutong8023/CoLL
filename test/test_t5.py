@@ -15,16 +15,16 @@
 # limitations under the License.
 
 """
-# Intro: 
+# Intro: test T5 model
 # Author: Tongtong Wu
 # Time: Aug 4, 2021
 """
 
-import torch
-import torch.nn as nn
+from transformers import T5ForConditionalGeneration, T5Tokenizer
+model = T5ForConditionalGeneration.from_pretrained("t5-small")
+tokenizer = T5Tokenizer.from_pretrained("t5-small")
 
-
-class AdapterFusion(nn.Module):
-    def __init__(self):
-        super(AdapterFusion, self).__init__()
-        pass
+input_ids = tokenizer('The <extra_id_0> walks in <extra_id_1> park', return_tensors='pt').input_ids
+labels = tokenizer('<extra_id_0> cute dog <extra_id_1> the <extra_id_2>', return_tensors='pt').input_ids
+# the forward function automatically creates the correct decoder_input_ids
+loss = model(input_ids=input_ids, labels=labels).loss
