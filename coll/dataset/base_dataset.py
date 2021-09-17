@@ -109,9 +109,9 @@ class BaseDataset(Dataset):
         self.unlabelled_data = []
         
         # meta information
-        self.target = None
-        self.tokenizer = None
-        self.label2id = {}
+        self.target = None  # id for each instance, used for data partition.
+        self.tokenizer = None  # related to the PLM
+        self.label2id = {}  # used for classification task
         
         # whether need development dataset
         self.require_dev = False
@@ -137,21 +137,15 @@ class BaseDataset(Dataset):
         """
         pass
     
+    def preprocess_data(self):
+        """
+        data preprocessing
+        """
+        pass
+    
     def load_data(self):
         """
         load data from files.
-        """
-        pass
-    
-    def filter_data(self, upper_bound: int, lower_bound: int):
-        """
-        filter data
-        """
-        pass
-    
-    def split_data(self, data):
-        """
-        split data into train / test / validation
         """
         pass
     
@@ -161,9 +155,6 @@ class BaseDataset(Dataset):
         self.data = data
         if target is None:
             self.targets = np.array([self.label2id[item["y_id"]] for item in self.data])
-    
-    def preprocess_data(self):
-        """
-        data preprocessing
-        """
-        pass
+            
+
+
